@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1355.0" styleClass="system-background-theme" stylesheets="@../../lib/css/bms-system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryManagement.BottleCapManagerController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="10.0" layoutY="10.0" prefHeight="624.0" prefWidth="1355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="1351.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+            <AnchorPane layoutX="69.0" layoutY="69.0" prefHeight="564.0" prefWidth="200.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1145.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="605.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="187.0" fitWidth="557.0" layoutX="-181.0" layoutY="229.0" pickOnBounds="true" rotate="-90.0" AnchorPane.leftAnchor="-181.0" AnchorPane.rightAnchor="-176.0" AnchorPane.topAnchor="229.0">
+                     <image>
+                        <Image url="@../../lib/img/cover.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="3.0" layoutY="1.0" prefHeight="42.0" prefWidth="193.0" style="-fx-background-color: #ffffff;" text="BOTTLE CAP MANAGER" textFill="#8c0000">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1145.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="580.0" prefHeight="30.0" prefWidth="1135.0" style="-fx-background-color: #ffffff;" text="DEVELOPED BY TECH_LEAD IT SOLUTIONS PVT (LTD) 2021 All rights Reserved " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextField fx:id="SearchTextBox" prefHeight="30.0" prefWidth="1125.0" promptText="Search in Here" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <FontAwesomeIconView fill="#182c49" glyphName="SEARCH" size="20" text="" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                        <TableView fx:id="bottleCapTable" onMouseClicked="#setSelectedData" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                          <columns>
+                              <TableColumn fx:id="selectionColumn" prefWidth="39.0" text="#" />
+                            <TableColumn fx:id="bCTagIdColumn" prefWidth="154.0" text="TAG ID" />
+                            <TableColumn fx:id="bCSpecsColumn" prefWidth="158.0" text="TAG Specifications" />
+                              <TableColumn fx:id="bCRegisteredDateColumn" prefWidth="132.0" text="Registered Date" />
+                              <TableColumn fx:id="bCAvailabilityStatusColumn" prefWidth="116.0" text="Availability" />
+                              <TableColumn fx:id="bCAllocationStatusColumn" prefWidth="138.0" text="Allocation Status" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="750.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                     <children>
+                        <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" onAction="#addData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: f8ea03;" text="Add">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" onAction="#updateSpecsAndAvailability" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: f8ea03;" text="Update">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" onAction="#deleteData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #b8020b;" text="Delete" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" onAction="#clearFields" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #585757;" text="Clear Fields" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton onAction="#printSelectedTags" prefHeight="40.0" prefWidth="240.0" style="-fx-border-color: #003305; -fx-border-radius: 5;" styleClass="default-button-color-scheme2" text="PRINT SELECTED TAGS">
+                                       <font>
+                                          <Font name="Calibri Bold" size="19.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="tagIdTextField" editable="false" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefWidth="180.0" text="TAG ID :" textFill="WHITE" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="tagIdValidationLabel" text="validation label" textFill="#f8ea03" visible="false" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="34.0" />
+                                    <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#generateTagId" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #585757;" text="GENERATE TAG ID" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="55.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="tagSpecsTextField" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefWidth="180.0" text="TAG Specifications : " textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="55.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="tagRegisteredDateTextField" editable="false" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefWidth="180.0" text="TAG Registered Date :" textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="55.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" prefWidth="180.0" text="TAG Availability Status :" textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="bCAvailabilityStatusChoiceBox" prefWidth="150.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="55.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" prefWidth="180.0" text="TAG Allocation Status :" textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="bCAllocationStatusChoiceBox" prefWidth="150.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

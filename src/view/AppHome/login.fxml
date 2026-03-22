@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1355.0" stylesheets="@../../lib/css/bms-system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AppHome.LoginController">
+   <children>
+      <AnchorPane fx:id="rootpane" prefHeight="730.0" prefWidth="1355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="440.0" prefWidth="1355.0" styleClass="system-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="290.0" prefWidth="1355.0" styleClass="system-background-theme" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="710.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="1335.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3e3e3" height="434.0" stroke="#003305" strokeType="INSIDE" strokeWidth="3.0" width="1335.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <VBox alignment="CENTER" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <ImageView fitHeight="660.0" fitWidth="939.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../lib/img/liquor_cover.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="307.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="740.0" styleClass="system-fore-ground" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="610.0" layoutX="151.0" layoutY="112.0" stroke="#003305" strokeType="INSIDE" strokeWidth="3.0" width="720.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <ImageView fitHeight="138.0" fitWidth="134.0" layoutX="313.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="338.0" AnchorPane.leftAnchor="313.0" AnchorPane.rightAnchor="313.0" AnchorPane.topAnchor="28.0">
+                     <image>
+                        <Image url="@../../lib/img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="175.0" prefHeight="58.0" prefWidth="432.0" text="SMART LIQUOR SHOP" textFill="#003305" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="154.0">
+                     <font>
+                        <Font name="Calibri Bold" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="192.0" layoutY="234.0" text="RETAIL MANAGEMENT SYSTEM" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="191.0">
+                     <font>
+                        <Font name="Calibri Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="UIDTextField" layoutX="190.0" layoutY="287.0" prefHeight="35.0" prefWidth="380.0" promptText="Enter Username" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.0" />
+                  <PasswordField fx:id="UPasswordPasswordField" layoutX="190.0" layoutY="328.0" prefHeight="35.0" prefWidth="380.0" promptText="Enter Password" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.0" />
+                  <JFXButton layoutX="190.0" layoutY="400.0" onAction="#validateLogin" prefHeight="40.0" prefWidth="175.0" style="-fx-border-color: #003305; -fx-border-radius: 5;" styleClass="default-button-color-scheme1" text="LOGIN" textFill="WHITE" AnchorPane.leftAnchor="190.0">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="375.0" layoutY="399.0" onAction="#clearFields" prefHeight="40.0" prefWidth="175.0" style="-fx-border-color: #003305; -fx-border-radius: 5;" styleClass="default-button-color-scheme2" text="CLEAR" AnchorPane.rightAnchor="190.0">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label fx:id="LoginValidateLabel" layoutX="190.0" layoutY="372.0" prefHeight="17.0" prefWidth="357.0" textFill="RED" />
+                  <Button layoutX="647.0" layoutY="442.0" mnemonicParsing="false" onAction="#fillData" text="Fill Data" visible="false" />
+                  <Circle fill="#ffffff00" layoutX="380.0" layoutY="95.0" radius="66.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="LoadingAnchorPane" prefHeight="750.0" prefWidth="1355.0" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1355.0" styleClass="system-background-theme" stylesheets="@../../lib/css/bms-system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.UserManagement.SystemUsersController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="10.0" layoutY="10.0" prefHeight="624.0" prefWidth="1355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="1351.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+            <AnchorPane layoutX="69.0" layoutY="69.0" prefHeight="564.0" prefWidth="200.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1145.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="605.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="187.0" fitWidth="557.0" layoutX="-181.0" layoutY="229.0" pickOnBounds="true" rotate="-90.0" AnchorPane.leftAnchor="-181.0" AnchorPane.rightAnchor="-176.0" AnchorPane.topAnchor="229.0">
+                     <image>
+                        <Image url="@../../lib/img/cover.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="3.0" layoutY="1.0" prefHeight="42.0" prefWidth="193.0" style="-fx-background-color: #ffffff;" text="SYSTEM USERS" textFill="#8c0000">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1145.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="580.0" prefHeight="30.0" prefWidth="1135.0" style="-fx-background-color: #ffffff;" text="DEVELOPED BY TECH_LEAD IT SOLUTIONS PVT (LTD) 2021 All rights Reserved " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SearchTextBox" layoutX="14.0" layoutY="8.0" prefHeight="30.0" prefWidth="1080.0" promptText="Search in Here" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIconView fill="#182c49" glyphName="SEARCH" layoutX="1112.0" layoutY="29.0" size="20" text="" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="8.0" />
+                  <Label fx:id="BPTypeLabel" layoutX="341.0" layoutY="437.0" prefHeight="21.0" prefWidth="298.0" textFill="#f8ea03" />
+                  <Label fx:id="BPStatusLabel" layoutX="664.0" layoutY="561.0" prefHeight="21.0" prefWidth="314.0" textFill="#f8ea03" />
+                  <TableView fx:id="UserTable" layoutX="5.0" layoutY="42.0" onMouseClicked="#loadSelectedData" onMousePressed="#loadSelectedModelData" prefHeight="525.0" prefWidth="640.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="42.0">
+                     <columns>
+                        <TableColumn fx:id="UIDColumn" prefWidth="145.33331298828125" text="ID" />
+                        <TableColumn fx:id="UNameColumn" prefWidth="165.66668701171875" text="User Name" />
+                        <TableColumn fx:id="UTypeColumn" prefWidth="110.0" text="User Type" />
+                        <TableColumn fx:id="UPasswordColumn" prefWidth="123.3333740234375" text="Password" />
+                        <TableColumn fx:id="UStatusColumn" prefWidth="93.3333740234375" text="User Status" />
+                     </columns>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" layoutX="662.0" layoutY="509.0" onAction="#addData" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: f8ea03;" text="Add" AnchorPane.leftAnchor="662.0" AnchorPane.topAnchor="520.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="822.0" layoutY="509.0" onAction="#updateData" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: f8ea03;" text="Update" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="520.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="971.0" layoutY="509.0" onAction="#clearFields" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #585757;" text="Clear Fields" textFill="WHITE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="520.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="696.0" layoutY="101.0" text="User Type :" textFill="WHITE" AnchorPane.leftAnchor="700.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="721.0" layoutY="269.0" text="User Name :" textFill="WHITE" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="230.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="UIDTextField" layoutX="828.0" layoutY="193.0" prefWidth="250.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="160.0" />
+                  <Label layoutX="736.0" layoutY="174.0" text="User ID" textFill="WHITE" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="160.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="UTypeChoiceBox" layoutX="879.0" layoutY="95.0" prefWidth="250.0" AnchorPane.rightAnchor="50.0" />
+                  <TextField fx:id="UNameTextField" layoutX="841.0" layoutY="262.0" prefWidth="250.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="230.0" />
+                  <Label fx:id="UTypeLabel" layoutX="775.0" layoutY="138.0" prefHeight="21.0" prefWidth="393.0" textFill="#f8ea03" AnchorPane.rightAnchor="50.0" />
+                  <Label fx:id="UIDLabel" layoutX="775.0" layoutY="230.0" prefHeight="21.0" prefWidth="393.0" textFill="#f8ea03" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="200.0" />
+                  <Label fx:id="UNameLabel" layoutX="775.0" layoutY="284.0" prefHeight="21.0" prefWidth="393.0" textFill="#f8ea03" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="270.0" />
+                  <Label layoutX="699.0" layoutY="448.0" text="User Account Status :" textFill="WHITE" AnchorPane.leftAnchor="700.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UStatusLabel" layoutX="765.0" layoutY="485.0" prefHeight="21.0" prefWidth="393.0" textFill="#f8ea03" AnchorPane.rightAnchor="50.0" />
+                  <ChoiceBox fx:id="UStatusChoiceBox" layoutX="860.0" layoutY="442.0" prefWidth="250.0" AnchorPane.rightAnchor="50.0" />
+                  <Label layoutX="698.0" layoutY="331.0" text="Password :" textFill="WHITE" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="300.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="711.0" layoutY="383.0" text="Confirm Password :" textFill="WHITE" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="370.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="UConfirmPasswordField" layoutX="845.0" layoutY="376.0" prefWidth="250.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="370.0" />
+                  <PasswordField fx:id="UPasswordField" layoutX="841.0" layoutY="314.0" prefWidth="250.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="300.0" />
+                  <Label fx:id="UPasswordLabel" layoutX="775.0" layoutY="356.0" prefHeight="21.0" prefWidth="393.0" textFill="#f8ea03" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="340.0" />
+                  <Label fx:id="UConfirmPasswordLabel" layoutX="761.0" layoutY="416.0" prefHeight="21.0" prefWidth="393.0" textFill="#f8ea03" AnchorPane.rightAnchor="50.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

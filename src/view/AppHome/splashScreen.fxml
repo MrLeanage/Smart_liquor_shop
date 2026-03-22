@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="470.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AppHome.SplashScreenController">
+   <children>
+      <AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="700.0" styleClass="system-background-theme" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="460.0" layoutX="5.0" layoutY="5.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="690.0" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <Label alignment="CENTER" layoutX="87.0" layoutY="183.0" prefHeight="155.0" prefWidth="526.0" text="SMART LIQUOR SHOP" textFill="WHITE" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="87.0">
+               <font>
+                  <Font name="Calibri" size="57.0" />
+               </font>
+            </Label>
+            <Label fx:id="footerLabel" alignment="CENTER" layoutY="429.0" prefHeight="30.0" prefWidth="700.0" text="DEVELOPED BY TECH LEAD IT SOLUTIONS PVT (LTD) 2021 All rights Reserved " textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="275.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="275.24549865722656">
+               <image>
+                  <Image url="@../../lib/img/logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="progressStatusLabel" layoutX="88.0" layoutY="351.0" prefHeight="30.0" prefWidth="516.0" text="status" textFill="WHITE" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="96.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="307.0" prefHeight="30.0" prefWidth="526.0" text="System is Loading Please Wait..." textFill="WHITE" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="87.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXProgressBar fx:id="systemProgressBar" layoutX="87.0" layoutY="339.0" prefHeight="15.0" prefWidth="526.0" progress="0.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="87.0" />
+            <Circle fill="#ffffff00" layoutX="350.0" layoutY="139.0" radius="77.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../lib/css/bms-system.css" />
+      <URL value="@../../lib/css/haivy-bms-ui.css" />
+   </stylesheets>
+</AnchorPane>

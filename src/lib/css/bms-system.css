@@ -1,0 +1,21 @@
+.system-background{
+    -fx-background-color: #e4e4e4;
+}
+.system-fore-ground{
+    -fx-background-color: #ffffff;
+}
+.system-background-theme{
+    -fx-background-color: #003305;
+}
+.system-background-theme-dark{
+    -fx-background-color: #37001a;
+}
+.default-button-color-scheme1{
+    -fx-background-color: #003305;
+}
+.default-button-color-scheme2{
+    -fx-background-color: #e1e1e1;
+}
+.default-selected-button-color-scheme1{
+    -fx-background-color: #df0067;
+}

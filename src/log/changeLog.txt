@@ -1,0 +1,4 @@
+# pkg util/userAlerts to util/systemAlerts
+
+# pkg util/userNotifications to view/NotificationManagement
+$ class util/userNotifications/Notification.java to view/NotificationManagement/NotificationBuilder.java

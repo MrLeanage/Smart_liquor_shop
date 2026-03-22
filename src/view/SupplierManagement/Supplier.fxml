@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1355.0" styleClass="system-background-theme" stylesheets="@../../lib/css/bms-system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SupplierManagement.SupplierController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="10.0" layoutY="10.0" prefHeight="624.0" prefWidth="1355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="1351.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+            <AnchorPane layoutX="69.0" layoutY="69.0" prefHeight="564.0" prefWidth="200.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1145.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="605.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="187.0" fitWidth="557.0" layoutX="-181.0" layoutY="229.0" pickOnBounds="true" rotate="-90.0" AnchorPane.leftAnchor="-181.0" AnchorPane.rightAnchor="-176.0" AnchorPane.topAnchor="229.0">
+                     <image>
+                        <Image url="@../../lib/img/cover.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="3.0" layoutY="1.0" prefHeight="42.0" prefWidth="193.0" style="-fx-background-color: #ffffff;" text="SUPPLIER" textFill="#8c0000">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1145.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="580.0" prefHeight="30.0" prefWidth="1135.0" style="-fx-background-color: #ffffff;" text="DEVELOPED BY TECH_LEAD IT SOLUTIONS PVT (LTD) 2021 All rights Reserved " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="SupplierTable" layoutX="7.0" layoutY="40.0" onMousePressed="#loadSelectedData" prefHeight="355.0" prefWidth="1080.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="13.0">
+                     <columns>
+                        <TableColumn fx:id="SIIDColumn" prefWidth="57.66668701171875" text="ID" />
+                        <TableColumn fx:id="SINameColumn" prefWidth="229.0" text="Supplier Name" />
+                        <TableColumn fx:id="SIAddressColumn" prefWidth="159.0" text="Address" />
+                        <TableColumn fx:id="SIPhone1Column" prefWidth="69.0" text="Phone1" />
+                        <TableColumn fx:id="SIPhone2Column" prefWidth="56.0" text="Phone 2" />
+                        <TableColumn fx:id="SIEmailColumn" prefWidth="161.6666259765625" text="Email" />
+                        <TableColumn fx:id="SITypeColumn" prefWidth="79.6666259765625" text="Type" />
+                        <TableColumn fx:id="SIBankColumn" prefWidth="142.0" text="Bank Name" />
+                        <TableColumn fx:id="SIAccNoColumn" prefWidth="171.0" text="Acc No" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="SearchTextBox" layoutX="9.0" layoutY="9.0" prefHeight="30.0" prefWidth="1080.0" promptText="Search in Here" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="19.0" layoutY="417.0" prefHeight="17.0" prefWidth="171.0" text="Type : " textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="360.0" layoutY="417.0" text="Supplier Name :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="462.0" text="Phone Number 1 :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="360.0" layoutY="462.0" text="Phone Number 2 :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="720.0" layoutY="466.0" text="E-mail :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SIPhone1TextField" layoutX="144.0" layoutY="462.0" prefHeight="25.0" prefWidth="200.0" promptText="0112345678" />
+                  <TextField fx:id="SIPhone2TextField" layoutX="485.0" layoutY="463.0" prefHeight="25.0" prefWidth="200.0" promptText="0112345678 (Optional)" />
+                  <TextField fx:id="SIEmailTextField" layoutX="801.0" layoutY="464.0" prefHeight="25.0" prefWidth="200.0" promptText="abc@xyz.com" />
+                  <JFXButton buttonType="RAISED" layoutX="1022.0" layoutY="443.0" onAction="#addData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: f8ea03;" text="Add" AnchorPane.rightAnchor="20.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="1022.0" layoutY="487.0" onAction="#updateData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: f8ea03;" text="Update" AnchorPane.rightAnchor="20.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="1022.0" layoutY="531.0" onAction="#deleteData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #b8020b;" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="20.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="1022.0" layoutY="399.0" onAction="#clearFields" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #585757;" text="Clear Fields" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="399.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="SIPhone2Label" layoutX="363.0" layoutY="491.0" prefHeight="17.0" prefWidth="322.0" textFill="#f8ea03" />
+                  <Label fx:id="SINameLabel" layoutX="357.0" layoutY="427.0" prefHeight="17.0" prefWidth="328.0" textFill="#f8ea03" />
+                  <Label fx:id="SIPhone1Label" layoutX="16.0" layoutY="493.0" prefHeight="17.0" prefWidth="328.0" textFill="#f8ea03" />
+                  <Label layoutX="20.0" layoutY="516.0" text="Bank Name :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="360.0" layoutY="516.0" text="Acc No :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SIBankTextField" layoutX="144.0" layoutY="516.0" prefHeight="25.0" prefWidth="200.0" />
+                  <TextField fx:id="SIAccNoTextField" layoutX="485.0" layoutY="517.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Label fx:id="SIBankLabel" layoutX="22.0" layoutY="547.0" prefHeight="17.0" prefWidth="322.0" textFill="#f8ea03" />
+                  <Label fx:id="SIAccNoLabel" layoutX="361.0" layoutY="547.0" prefHeight="17.0" prefWidth="323.0" textFill="#f8ea03" />
+                  <ChoiceBox fx:id="SITypeChoiceBox" layoutX="144.0" layoutY="417.0" prefWidth="200.0" AnchorPane.topAnchor="417.0" />
+                  <FontAwesomeIconView fill="#182c49" glyphName="SEARCH" layoutX="1112.0" layoutY="26.0" size="20" AnchorPane.rightAnchor="18.0" />
+                  <TextField fx:id="SINameTextField" layoutX="485.0" layoutY="418.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Label fx:id="SINameLabel1" layoutX="382.0" layoutY="448.0" prefHeight="17.0" prefWidth="328.0" textFill="#f8ea03" />
+                  <Label layoutX="720.0" layoutY="417.0" text="Address :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SIAddressTextField" layoutX="801.0" layoutY="417.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.topAnchor="417.0" />
+                  <Label fx:id="SIAddressLabel1" layoutX="720.0" layoutY="449.0" prefHeight="17.0" prefWidth="280.0" textFill="#f8ea03" />
+                  <Label fx:id="SIEmailLabel" layoutX="720.0" layoutY="492.0" prefHeight="17.0" prefWidth="246.0" textFill="#f8ea03" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

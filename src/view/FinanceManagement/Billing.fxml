@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1355.0" styleClass="system-background-theme" stylesheets="@../../lib/css/bms-system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FinanceManagement.BillingController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="10.0" layoutY="10.0" prefHeight="624.0" prefWidth="1355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="1351.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+            <AnchorPane layoutX="69.0" layoutY="69.0" prefHeight="564.0" prefWidth="200.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1145.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="605.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="187.0" fitWidth="557.0" layoutX="-181.0" layoutY="229.0" pickOnBounds="true" rotate="-90.0" AnchorPane.leftAnchor="-181.0" AnchorPane.rightAnchor="-176.0" AnchorPane.topAnchor="229.0">
+                     <image>
+                        <Image url="@../../lib/img/cover.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="3.0" layoutY="1.0" prefHeight="42.0" prefWidth="193.0" style="-fx-background-color: #ffffff;" text="BILLING" textFill="#8c0000">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1145.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label fx:id="footerLabel" alignment="CENTER" layoutX="-3.0" layoutY="580.0" prefHeight="30.0" prefWidth="1135.0" style="-fx-background-color: #ffffff;" text="DEVELOPED BY TECH_LEAD IT SOLUTIONS PVT (LTD) 2021 All rights Reserved " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003305" height="120.0" layoutX="4.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="745.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="396.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003305" height="564.0" layoutX="754.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="378.0" AnchorPane.leftAnchor="754.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="5.0" />
+                  <Label layoutX="80.0" layoutY="25.0" text="Billing" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="565.0" layoutY="454.0" onAction="#generateBill" prefHeight="110.0" prefWidth="179.0" style="-fx-background-color: #029206;" text="Print Bill" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="13.0" layoutY="524.0" onAction="#clearCart" prefHeight="34.0" prefWidth="284.0" style="-fx-background-color: #585757;" text="Clear Bill" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37001a" height="110.0" layoutX="303.0" layoutY="455.0" stroke="TRANSPARENT" strokeType="INSIDE" width="257.0" />
+                  <Label layoutX="373.0" layoutY="466.0" prefHeight="25.0" prefWidth="139.0" text="TOTAL AMOUNT" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="TotalAmountLabel" alignment="CENTER" layoutX="312.0" layoutY="490.0" prefHeight="54.0" prefWidth="241.0" text="Rs : 0.00" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="460.0" text="Total Items :" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="487.0" text="Date :" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="BillTable" layoutX="14.0" prefHeight="441.0" prefWidth="745.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="395.0" AnchorPane.topAnchor="5.0">
+                     <columns>
+                        <TableColumn fx:id="BIDColumn" prefWidth="81.33332824707031" text="Product ID" />
+                        <TableColumn fx:id="BNameColumn" prefWidth="217.0" text="Product Name" />
+                        <TableColumn fx:id="BWeightColumn" minWidth="0.0" prefWidth="95.0" text="Unit Weight" />
+                        <TableColumn fx:id="BPriceColumn" prefWidth="96.88885498046875" text="Unit Price" />
+                        <TableColumn fx:id="BQuantityColumn" prefWidth="54.111083984375" text="Qty" />
+                        <TableColumn fx:id="BTotalColumn" prefWidth="96.888916015625" text="Total" />
+                        <TableColumn fx:id="BActionColumn" prefWidth="108.55560302734375" text="Action" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="ProductsTable" layoutX="759.0" layoutY="52.0" onMouseClicked="#loadSelectedData" onMousePressed="#loadSelectedDataModel" prefHeight="154.0" prefWidth="369.0" AnchorPane.topAnchor="40.0">
+                     <columns>
+                        <TableColumn fx:id="PIDColumn" prefWidth="61.6666259765625" text="ID" />
+                        <TableColumn fx:id="PNameColumn" prefWidth="140.6666259765625" text="Product Name" />
+                        <TableColumn fx:id="PWeightPerUnitColumn" prefWidth="72.3333740234375" text="Weight" />
+                        <TableColumn fx:id="PPriceColumn" prefWidth="92.6666259765625" text="Price" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="SearchTextBox" layoutX="760.0" layoutY="10.0" prefHeight="30.0" prefWidth="368.0" promptText="Search in Here" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIconView fill="#182c49" glyphName="SEARCH" layoutX="1105.0" layoutY="29.0" size="20" text="" />
+                  <JFXButton buttonType="RAISED" layoutX="759.0" layoutY="497.0" onAction="#addDataToCart" onMousePressed="#playBeep" prefHeight="68.0" prefWidth="369.0" style="-fx-background-color: f8ea03;" text="Add to Bill">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <Spinner fx:id="PQuantitySpinner" editable="true" layoutX="929.0" layoutY="397.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="16.0" />
+                  <JFXButton buttonType="RAISED" layoutX="759.0" layoutY="452.0" onAction="#clearFields" prefHeight="40.0" prefWidth="369.0" style="-fx-background-color: #585757;" text="Clear Fields" textFill="WHITE" AnchorPane.rightAnchor="16.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="775.0" layoutY="233.0" prefHeight="21.0" prefWidth="117.0" text="Item Code ID : " textFill="WHITE" AnchorPane.leftAnchor="775.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="775.0" layoutY="392.0" text="Quantity :" textFill="WHITE" AnchorPane.leftAnchor="775.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="775.0" layoutY="263.0" prefHeight="27.0" prefWidth="103.0" text="Item Name : " textFill="WHITE" AnchorPane.leftAnchor="775.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="775.0" layoutY="296.0" prefHeight="27.0" prefWidth="103.0" text="Unit Weight :" textFill="WHITE" AnchorPane.leftAnchor="775.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PNameTextbox" editable="false" layoutX="929.0" layoutY="264.0" prefWidth="200.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="16.0" />
+                  <TextField fx:id="PIDTextbox" editable="false" layoutX="929.0" layoutY="231.0" prefWidth="200.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="16.0" />
+                  <TextField fx:id="PWeightTextbox" editable="false" layoutX="929.0" layoutY="297.0" prefWidth="200.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="16.0" />
+                  <Label fx:id="PQuantityLabel" layoutX="828.0" layoutY="427.0" prefHeight="21.0" prefWidth="353.0" textFill="#f8ea03" AnchorPane.rightAnchor="16.0" />
+                  <Label fx:id="TotalItemLabel" layoutX="134.0" layoutY="463.0" prefHeight="17.0" prefWidth="154.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="DateLabel" layoutX="134.0" layoutY="494.0" prefHeight="17.0" prefWidth="162.0" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="775.0" layoutY="332.0" prefHeight="27.0" prefWidth="103.0" text="Price per Unit :" textFill="WHITE" AnchorPane.leftAnchor="775.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PPriceTextbox" editable="false" layoutX="929.0" layoutY="330.0" prefWidth="200.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="16.0" />
+                  <Label layoutX="775.0" layoutY="202.0" prefHeight="21.0" prefWidth="117.0" text="Browse Order :" textFill="WHITE" visible="false" AnchorPane.leftAnchor="775.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PTotalPriceTextbox" disable="true" editable="false" layoutX="929.0" layoutY="362.0" prefWidth="200.0" AnchorPane.leftAnchor="929.0" AnchorPane.rightAnchor="16.0" />
+                  <Label fx:id="OrderPaymentLabel" layoutX="775.0" layoutY="370.0" prefHeight="27.0" prefWidth="152.0" textFill="WHITE" AnchorPane.leftAnchor="775.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="PBarCodeTextBox" editable="false" layoutX="929.0" layoutY="198.0" prefWidth="200.0" />
+                  <Label layoutX="775.0" layoutY="202.0" prefHeight="21.0" prefWidth="117.0" text="Item Barcode:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

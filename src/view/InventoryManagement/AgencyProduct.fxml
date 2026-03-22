@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1355.0" styleClass="system-background-theme" stylesheets="@../../lib/css/bms-system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InventoryManagement.AgencyProductsController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="10.0" layoutY="10.0" prefHeight="624.0" prefWidth="1355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="620.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="1351.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+            <AnchorPane layoutX="69.0" layoutY="69.0" prefHeight="564.0" prefWidth="200.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1145.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="605.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="187.0" fitWidth="557.0" layoutX="-181.0" layoutY="229.0" pickOnBounds="true" rotate="-90.0" AnchorPane.leftAnchor="-181.0" AnchorPane.rightAnchor="-176.0" AnchorPane.topAnchor="229.0">
+                     <image>
+                        <Image url="@../../lib/img/cover.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="3.0" layoutY="1.0" prefHeight="42.0" prefWidth="193.0" style="-fx-background-color: #ffffff;" text="AGENCY PRODUCT" textFill="#8c0000">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="209.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1145.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="580.0" prefHeight="30.0" prefWidth="1135.0" style="-fx-background-color: #ffffff;" text="DEVELOPED BY TECH_LEAD IT SOLUTIONS PVT (LTD) 2021 All rights Reserved " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="AgencyProductTable" layoutX="5.0" layoutY="38.0" onMousePressed="#loadSelectedData" prefHeight="315.0" prefWidth="1080.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="10.0">
+                     <columns>
+                        <TableColumn fx:id="APIDColumn" prefWidth="57.66668701171875" text="APID" />
+                        <TableColumn fx:id="APNameColumn" prefWidth="133.44442749023438" text="Product Name" />
+                        <TableColumn fx:id="APSIDColumn" prefWidth="49.888916015625" text="SID" />
+                        <TableColumn fx:id="APSupplierNameColumn" prefWidth="160.3333740234375" text="Supplier" />
+                        <TableColumn fx:id="APUnitsColumn" prefWidth="65.55560302734375" text="Total Units" />
+                        <TableColumn fx:id="APWeightColumn" prefWidth="76.11114501953125" text="Weight/Unit" />
+                        <TableColumn fx:id="APBuyingPriceColumn" prefWidth="75.55560302734375" text="Buying Price" />
+                        <TableColumn fx:id="APMarketPriceColumn" prefWidth="82.111083984375" text="Market Price" />
+                        <TableColumn fx:id="APSellingPriceColumn" prefWidth="83.0" text="Selling Price" />
+                        <TableColumn fx:id="APManufactureDateColumn" prefWidth="63.0" text="M - Date" />
+                        <TableColumn fx:id="APExpireDateColumn" prefWidth="74.5555419921875" text="Exp - Date" />
+                        <TableColumn fx:id="APAddedDateColumn" prefWidth="109.0" text="Added Date" />
+                        <TableColumn fx:id="APDiscontinueAlertDateColumn" prefWidth="99.0" text="Alert Date" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="SearchTextBox" layoutX="5.0" layoutY="4.0" prefHeight="30.0" prefWidth="1080.0" promptText="Search in Here" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="4.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIconView fill="#182c49" glyphName="SEARCH" layoutX="1112.0" layoutY="26.0" size="20" />
+                  <TextField fx:id="APSupplierNameTextBox" editable="false" layoutX="223.0" layoutY="520.0" prefHeight="25.0" prefWidth="130.0" promptText="Supplier Name" />
+                  <Button fx:id="APSelectSupplierButton" layoutX="361.0" layoutY="520.0" mnemonicParsing="false" onAction="#selectSupplier" text="Browse" />
+                  <JFXButton buttonType="RAISED" layoutX="1010.0" layoutY="368.0" onAction="#clearFields" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #585757;" text="Clear Fields" textFill="WHITE" AnchorPane.rightAnchor="25.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="1010.0" layoutY="525.0" onAction="#deleteData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #b8020b;" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="25.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="658.0" layoutY="370.0" text="Weight/Unit :" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="1010.0" layoutY="472.0" onAction="#updateData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: f8ea03;" text="Update" AnchorPane.rightAnchor="25.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="APBarcodeTextBox" layoutX="783.0" layoutY="523.0" prefHeight="25.0" prefWidth="190.0" />
+                  <Label layoutX="655.0" layoutY="529.0" text="Barcode:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="APBarcodeLabel" layoutX="658.0" layoutY="555.0" prefHeight="21.0" prefWidth="314.0" textFill="#f8ea03" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="236.0" layoutY="380.0" prefHeight="17.0" prefWidth="171.0" text="Product Name :" textFill="WHITE" AnchorPane.leftAnchor="236.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="236.0" layoutY="530.0" text="Select Supplier :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="561.0" layoutY="380.0" text="Total Units :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="236.0" layoutY="430.0" text="Purchasing Price :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="561.0" layoutY="430.0" text="Market Price :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="APProductNameTextBox" layoutX="366.0" layoutY="380.0" prefHeight="25.0" prefWidth="190.0" AnchorPane.topAnchor="380.0" />
+            <TextField fx:id="APUnitsTextBox" layoutX="671.0" layoutY="380.0" prefHeight="25.0" prefWidth="190.0" AnchorPane.topAnchor="380.0" />
+            <TextField fx:id="APWeightTextBox" layoutX="991.0" layoutY="380.0" prefHeight="25.0" prefWidth="190.0" promptText="KG/L" AnchorPane.topAnchor="380.0" />
+            <TextField fx:id="APBuyingPriceTextBox" layoutX="366.0" layoutY="430.0" prefHeight="25.0" prefWidth="190.0" />
+            <TextField fx:id="APMarketPriceTextBox" layoutX="671.0" layoutY="430.0" prefHeight="25.0" prefWidth="190.0" />
+            <JFXButton buttonType="RAISED" layoutX="1220.0" layoutY="430.0" onAction="#addData" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: f8ea03;" text="Add" AnchorPane.rightAnchor="25.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="866.0" layoutY="430.0" text="Selling Price :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="236.0" layoutY="480.0" text="Manufacture Date : " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="APSellingPriceTextBox" layoutX="991.0" layoutY="430.0" prefHeight="25.0" prefWidth="190.0" />
+            <Label layoutX="561.0" layoutY="480.0" text="Exp Date :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="866.0" layoutY="480.0" text="Discon Alert Date :" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="APManufactureDateDatePicker" editable="false" layoutX="366.0" layoutY="480.0" prefHeight="25.0" prefWidth="190.0" showWeekNumbers="true" />
+            <DatePicker fx:id="APExpDateDatePicker" editable="false" layoutX="671.0" layoutY="480.0" prefHeight="25.0" prefWidth="190.0" showWeekNumbers="true" />
+            <DatePicker fx:id="APDiscontinueAlertDatePicker" editable="false" layoutX="991.0" layoutY="480.0" prefWidth="190.0" showWeekNumbers="true" />
+            <Label fx:id="APProductNameLabel" layoutX="236.0" layoutY="407.0" prefHeight="21.0" prefWidth="320.0" textFill="#f8ea03" />
+            <Label fx:id="APWeightLabel" layoutX="866.0" layoutY="407.0" prefHeight="21.0" prefWidth="314.0" textFill="#f8ea03" />
+            <Label fx:id="APUnitsLabel" layoutX="561.0" layoutY="407.0" prefHeight="21.0" prefWidth="298.0" textFill="#f8ea03" />
+            <Label fx:id="APBuyingPriceLabel" layoutX="236.0" layoutY="457.0" prefHeight="21.0" prefWidth="320.0" textFill="#f8ea03" />
+            <Label fx:id="APManufactureDateLabel" layoutX="236.0" layoutY="507.0" prefHeight="21.0" prefWidth="320.0" textFill="#f8ea03" />
+            <Label fx:id="APSupplierNameLabel" layoutX="236.0" layoutY="557.0" prefHeight="21.0" prefWidth="320.0" textFill="#f8ea03" />
+            <Label fx:id="APExpDateLabel" layoutX="561.0" layoutY="507.0" prefHeight="21.0" prefWidth="298.0" textFill="#f8ea03" />
+            <Label fx:id="APMarketPriceLabel" layoutX="561.0" layoutY="457.0" prefHeight="21.0" prefWidth="298.0" textFill="#f8ea03" />
+            <Label fx:id="APSellingPriceLabel" layoutX="866.0" layoutY="457.0" prefHeight="21.0" prefWidth="314.0" textFill="#f8ea03" />
+            <Label fx:id="APDiscontinueDateLabel" layoutX="866.0" layoutY="507.0" prefHeight="21.0" prefWidth="314.0" textFill="#f8ea03" />
+            <TextField fx:id="APSupplierIDTextBox" editable="false" layoutX="367.0" layoutY="530.0" prefHeight="25.0" prefWidth="55.0" promptText="ID" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

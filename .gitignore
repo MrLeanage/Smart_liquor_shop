@@ -1,0 +1,9 @@
+/out
+/build
+/dist
+/.idea
+/nbproject
+/bundles
+*.iml
+*.class
+*.jar
